@@ -18,7 +18,7 @@ global.__basedir = __dirname;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 app.get("/", (req, res) => {
-  res.send("Hello World now it's from docker!");
+  res.send("Hello World now it's from docker second try!");
 });
 
 app.use("/api", objetRouter);
