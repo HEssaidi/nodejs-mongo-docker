@@ -25,4 +25,4 @@ app.use("/api", objetRouter);
 app.use("/api/user", userRouter);
 app.use("/api/discussion", discussionRouter);
 
-app.listen(apiPort, "0.0.0.0", () => console.log(`Server running on port ${apiPort}`));
+app.listen(apiPort,() => console.log(`Server running on port ${apiPort}`));
