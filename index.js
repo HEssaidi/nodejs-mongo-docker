@@ -8,7 +8,7 @@ const userRouter = require("./routes/user-router");
 const discussionRouter = require("./routes/discussion-router");
 
 const app = express();
-const apiPort = 3001;
+const apiPort = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
