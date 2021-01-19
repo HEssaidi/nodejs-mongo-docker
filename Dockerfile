@@ -1,18 +1,17 @@
 FROM node:12
 
-# Create app directory
+# Create app directory : install packages into container, create folders,
 RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+#working directory for the instructions that follow.
+WORKDIR /usr/src/app   
 
 # Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
+# copies files and directories to the container
 COPY package*.json /usr/src/app/
 #COPY package*.json ./
 
 RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+
 
 # Bundle app source
 #COPY . .
@@ -20,3 +19,5 @@ COPY . /usr/src/app
 
 EXPOSE 3000
 CMD [ "node", "index.js" ]
+#default command to launch nodejs app 
+#which will be executed only when you run container without specifying a command
